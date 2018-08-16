@@ -8,11 +8,12 @@ parser.add_argument("movie_tyepe", required=False)  # 参数是否必须加
 parser.add_argument("hobby", action="append")  # 参数追加  一个key 对应多个value
 parser.add_argument("csrftoken", location="cookies")  # location 位置
 
+# 内层输出参数格式化
 movie_fields = {
     'm_name': fields.String
 }
 
-# 输出数据格式化
+# 外层输出数据格式化
 response_movie_fields = {
     # 'msg': fields.String,
     'message': fields.String(attribute="msg"),  # attribute 修改属性名
