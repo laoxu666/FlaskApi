@@ -6,6 +6,15 @@ from App.ext import db
 from App.models.ModelUtil import BaseModel
 
 
+# 权限判定
+# 读
+READ = 1
+# 赞
+PRAISE = 2
+# 写
+WRITE = 4
+
+
 class User(BaseModel, db.Model):
     u_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     u_name = db.Column(db.String(32), unique=True)
