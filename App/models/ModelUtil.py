@@ -15,7 +15,7 @@ class BaseModel:
             print("error:", e)
             return False
 
-    # save 创建保存数据方法
+    # delete 创建保存数据方法
     def delete(self):
         try:
             db.session.delete(self)
