@@ -85,3 +85,7 @@ class User(BaseModel, db.Model):
     # 验证密码
     def verify_password(self, password):
         return check_password_hash(self._u_password, password)
+
+    # 权限判定
+    def check_permission(self, permission):
+        return self.u_permission & permission == permission
